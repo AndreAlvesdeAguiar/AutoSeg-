@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!, only: %i[index new create destroy search]
   before_action :user_profile?
-  before_action :find_task, only: %i[edit update show confirm_delete destroy delete_comment]
+#  before_action : only: %i[edit update show confirm_delete destroy delete_comment]
   skip_before_action :verify_authenticity_token, only: %i[search]
     
   def index
@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def show 
-    @task = Task.find(params[:id])
+    
 
   end
 
