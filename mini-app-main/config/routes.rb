@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :tasks 
+  resources :task_lists
 
   resources :profiles, only: %i[show new create update edit] do
     get 'private_page', on: :member
