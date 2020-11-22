@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
 
-  resources :tasks 
+  resources :tasks
   resources :task_lists
 
   resources :profiles, only: %i[show new create update edit] do

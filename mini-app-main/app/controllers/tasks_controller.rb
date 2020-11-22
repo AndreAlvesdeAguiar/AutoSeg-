@@ -9,7 +9,8 @@ class TasksController < ApplicationController
   end
 
   def show 
-    
+    @task = Task.find(params[:id])
+
 
   end
 
@@ -21,7 +22,7 @@ class TasksController < ApplicationController
    @task = Task.create(task_params)
     @task.user = current_user
     if @task.save
-      flash[:notice] = 'Profile Created!'
+      flash[:notice] = 'Task Created'
       redirect_to @task
     else
       render :new
@@ -43,6 +44,12 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @tasks = Task.find(params[:id])
+    @tasks.destroy
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: 'Lista de tarefas deletada com sucesso!' }
+      format.json { head :no_content }
+    end
   end
 
   def complete

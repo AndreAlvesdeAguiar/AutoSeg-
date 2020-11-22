@@ -1,2 +1,29 @@
+<table>
+<tr>
+ 
+  <th><th>Title</th></th>
+  <th><th>Decription</th></th>
+  <th><th>Status</th></th>
 
-     
+</tr>
+   
+    <td><td><%= @task.title %></td></td>
+    <td><td><%= @task.description %></td></td>
+    <td><td><%= @task.status %></td></td>
+    
+    
+</tr>
+
+
+<td><td> 
+<div class="trash">
+<%= link_to task_path(@task), method: :delete, data: { confirm: "Tem certeza que deseja excluir?" } do %>
+<i class="fa fa-trash"></i>
+   
+
+
+<% end %>
+
+  
+
+</table>

@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :profile , dependent: :destroy 
-  has_many :tasks
+  has_many :tasks, dependent: :destroy 
   has_many :comments, dependent: :destroy 
   has_many :pluses, dependent: :destroy 
   has_many :minuses, dependent: :destroy
