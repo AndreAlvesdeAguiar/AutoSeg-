@@ -12,20 +12,18 @@
   <tr>
 
 
-    <td><td> 
-    <div class="trash">
-    <%= link_to tasks_path(@tasks), method: :delete, data: { confirm: "Tem certeza que deseja excluir?" } do %>
+    
+    
     
       
      
       
 
 
-    <% end %>
+    
     
     </div>    
-    
-    <td><td><%= link_to task_list.id %></td></td>
+    <td><td><%= link_to task_list.id, task_list %></td></td>
     <td><td><%= link_to task_list.title, task_list %></td></td>
     <td><td><%= task_list.description %></td></td>
     <td><td><%= task_list.status %></td></td>
