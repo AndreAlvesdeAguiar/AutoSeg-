@@ -1,8 +1,22 @@
 class TaskListsController < ApplicationController
     def index
-        @task_lists = Task.all
+       # @task_lists = Task.order.all(:title)
+        #@task_lists = Task.where(status: 'complete')
+        @task_lists = Task.where(user: current_user)
+        # @task_lists = Task.sort!(title)
+        
+        
+         if params[:order].in? %w[new old]
+          case params[:order]
+          when 'new'
+            @task_lists.order!(:comments)
+           when 'old'
+            @task_lists = Task.where(status: 'complete')
+      end
+        end
     end
   
+    
     # GET /task_lists/1
     # GET /task_lists/1.json
     def show
