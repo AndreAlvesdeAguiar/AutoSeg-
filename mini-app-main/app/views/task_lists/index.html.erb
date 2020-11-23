@@ -1,41 +1,44 @@
-       
+      
 <table>
-  <tr>
-    <th><th>Task (ID) </th></th>
-    <th><th>Title</th></th>
-    <th><th>Comments</th></th>
-    <th><th>Status</th></th>
-  </tr>
-  
-  
-  
-  <div class='row justify-content-md-center'>
-  <ul class="nav nav-tabs">
-  <li class="nav-item">
-  <%= link_to 'ordem comments', task_lists_path(order: 'new'), class: ((params[:order] == 'new') ? "nav-link active" : "nav-link"), id: 'ord_new'%>
-   </li>
-  <li class="nav-item">
-  <%= link_to 'Oldest', task_lists_path(order: 'old'), class: ((params[:order] == 'old') ? "nav-link active" : "nav-link"), id: 'ord_old'%>
-  </li>
-  </ul>
-  </div> 
-  
-  
-  <% @task_lists.each do |task_list| %>
+<tr>
+  <th><th>Task (ID) </th></th>
+  <th><th>Title</th></th>
+  <th><th>Comments</th></th>
+  <th><th>Status</th></th>
+</tr>
 
-  <tr>
-       
-    </div>    
-    <td><td><%= link_to task_list.id, task_list %></td></td>
-    <td><td><%= link_to task_list.title, task_list %></td></td>
-    <td><td><%= task_list.description %></td></td>
-    <td><td><%= task_list.status %></td></td>
-    
-    
-    <td><td><%=  %></td></td>
-  </tr>
+
+
+<div class='row justify-content-md-center'>
+<ul class="nav nav-tabs">
+<li class="nav-item">
+<%= link_to 'Tasks Total', task_lists_path(order: 'new'), class: ((params[:order] == 'new') ? "nav-link active" : "nav-link"), id: 'ord_new'%>
+ </li>
+
+<li class="nav-item">
+<%= link_to 'Tasks Completed', task_lists_path(order: 'old'), class: ((params[:order] == 'old') ? "nav-link active" : "nav-link"), id: 'ord_old'%>
+</li>
+</ul>
+</div> 
+
+
+<% @task_lists.each do |task_list| %>
+
+<tr>
+     
+  </div>    
+  <td><td><%= link_to task_list.id, task_list %></td></td>
+  <td><td><%= link_to task_list.title, task_list %></td></td>
+  <td><td><%= task_list.description %></td></td>
+  <td><td><%= task_list.status %></td></td>
   
-  <% end %>
   
+  <td><td><%=  %></td></td>
+</tr>
+
+<% end %>
+
 
 </table>
+
+
