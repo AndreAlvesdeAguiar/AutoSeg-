@@ -46,11 +46,12 @@ rails db:seed
 
 -
 in case of any mistake. Delete the existing database and run seed again.
+
 Terminal:
 rails db:drop
 rails db:create
 rails db:seed
--
+
 
 # Step : 6
 
