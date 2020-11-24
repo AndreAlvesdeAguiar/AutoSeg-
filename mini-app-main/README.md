@@ -1,4 +1,4 @@
-## Challenge AutoSeg
+## Challenge AutoSeg 
 ### TaskManager App
 Considere o app deste projeto já estruturado, onde nele conseguimos cadastrar tarefas do dia-a-dia a serem realizadas, junto com uma descrição, colocar comentários e algumas outras features :) 
   Então... considere a atual estrutura de model já existente:
