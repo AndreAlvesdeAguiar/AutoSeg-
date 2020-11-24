@@ -69,7 +69,7 @@ class TaskListsController < ApplicationController
   def destroy
     @task_list.destroy
     respond_to do |format|
-      format.html { redirect_to root_url, notice: 'Lista de tarefas deletada com sucesso!' }
+      format.html { redirect_to root_url, notice: 'Task list successfully deleted!' }
       format.json { head :no_content }
     end
   end

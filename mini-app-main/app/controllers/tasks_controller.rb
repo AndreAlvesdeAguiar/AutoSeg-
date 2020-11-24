@@ -47,7 +47,8 @@ class TasksController < ApplicationController
     @tasks = Task.find(params[:id])
     @tasks.destroy
     respond_to do |format|
-      format.html { redirect_to root_url, notice: 'Lista de tarefas deletada com sucesso!' }
+      format.html { redirect_to task_lists_path, notice: '
+      Task list successfully deleted!' }
       format.json { head :no_content }
     end
   end
