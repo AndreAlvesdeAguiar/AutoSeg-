@@ -64,7 +64,7 @@ rails db:migrate
 Great. We are ready to run our application.
 
 Terminal:
-Rails s
+rails s
 
 And then access the application in the browser: locahost: 3000 
 
